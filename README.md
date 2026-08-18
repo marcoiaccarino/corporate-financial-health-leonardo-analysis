@@ -30,7 +30,7 @@ I team di Corporate Finance, M&A Advisory e Risk Management necessitano di evide
 * **Perimetro di Analisi:** Serie storica quadriennale (2021, 2022, 2023, 2024) per Leonardo S.p.A. (HQ: Roma, Italia) e Airbus SE (HQ: Leida, Paesi Bassi).
 * **Accounting Audit & Normalizzazione:**
   * *Verifica Identità Contabile:* Validazione automatica della quadratura di bilancio ($\text{Totale Attivo} = \text{Totale Passivo + Patrimonio Netto}$) per tutti gli 8 rendiconti analizzati.
-  * *Riconciliazione IFRS $\rightarrow$ Gestionale:* Riclassificazione secondo lo schema accademico funzionale (*Economia Aziendale 2*): Stato Patrimoniale a Capitale Investito Netto (CIN) / Finanziario e Conto Economico a Valore della Produzione e Valore Aggiunto.
+  * *Riconciliazione IFRS --> Gestionale:* Riclassificazione secondo lo schema accademico funzionale: Stato Patrimoniale a Capitale Investito Netto (CIN) / Finanziario e Conto Economico a Valore della Produzione e Valore Aggiunto.
 
 ---
 
@@ -126,7 +126,7 @@ Framework di valutazione integrato articolato su 12 indicatori economico-patrimo
 
 ## Skills:
 
-* **Financial Modeling & Accounting Frameworks:** IFRS/IAS Financial Reporting, Bilanci Consolidati, Riclassificazione Finanziaria e Funzionale (*Economia Aziendale 2*), Calcolo Matrici Indici di Bilancio (ROE, ROI, ROS, PFN/EBITDA, ICR), Altman Z-Score Predictive Distress Modeling.
+* **Financial Modeling & Accounting Frameworks:** IFRS/IAS Financial Reporting, Bilanci Consolidati, Riclassificazione Finanziaria e Funzionale, Calcolo Matrici Indici di Bilancio (ROE, ROI, ROS, PFN/EBITDA, ICR), Altman Z-Score Predictive Distress Modeling.
 * **Python Data Engineering & Analytics:** `pandas` (ingestione bilanci, manipolazione matriciale e data transformation), `numpy` (vettorizzazione algoritmi e metriche finanziarie).
 * **Data Visualization & Dashboard Design:** `plotly.subplots` (architettura visiva 2x2 dark-themed, High Data-Ink Ratio, scale DPI ad alta definizione con `kaleido`), semantic corporate color coding (Leonardo Navy `#0052cc` vs Airbus Orange `#ff9900`).
 
