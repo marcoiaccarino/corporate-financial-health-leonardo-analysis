@@ -26,16 +26,17 @@ Questo progetto analizza l'andamento economico-finanziario e la solvibilità qua
 
 ## 📁 Repository Structure
 
+```text
 corporate-financial-health-leonardo-analysis/
 │
 ├── data/
-│   ├── raw/                 # Dati IFRS grezzi di bilancio (2021-2024)
-│   └── processed/           # Matrici riclassificate e tabelle indici
+│   ├── raw/                           # Dati IFRS grezzi di bilancio (2021-2024)
+│   └── processed/                     # Matrici riclassificate e tabelle indici
 │
 ├── notebooks/
-│   └── financial_analysis.ipynb   # Pipeline completa in Python (dati, calcoli e grafici)
+│   └── financial_analysis.ipynb       # Pipeline completa in Python (dati, calcoli e grafici)
 │
-├── screenshots/             # Output documentati del progetto
+├── screenshots/                       # Output documentati del progetto
 │   ├── 01_leonardo_ifrs_statements.png
 │   ├── 01_bis_airbus_ifrs_statements.png
 │   ├── 02_leonardo_reclassified_statements.png
@@ -45,8 +46,8 @@ corporate-financial-health-leonardo-analysis/
 │   ├── 04_altman_z_score_analysis.png
 │   └── 05_financial_benchmark_dashboard.png
 │
-├── README.md                # Reportistica del progetto
-└── requirements.txt         # Dipendenze Python
+├── README.md                          # Reportistica del progetto
+└── requirements.txt                   # Dipendenze Python
 
 ---
 
