@@ -48,9 +48,8 @@ corporate-financial-health-leonardo-analysis/
 │
 ├── README.md                          # Reportistica del progetto
 └── requirements.txt                   # Dipendenze Python
-
+```
 ---
-
 ## 🛠️ Accounting Framework, Formulas & Project Deliverables
 
 ### 1. Bilanci Consolidati Ufficiali IFRS (FY 2021–2024)
@@ -119,15 +118,22 @@ Verifica dell'identità contabile: Totale Attivo = Totale Passivo + Patrimonio N
   * X5 = Ricavi / Totale Attivo
 * **Soglie:** Z > 2.99 (Safe Zone 🟢), 1.81 <= Z <= 2.99 (Grey Zone 🟡), Z < 1.81 (Distress Zone 🔴).
 
-| Altman Z-Score Analysis | Corporate Benchmark Dashboard (Plotly) |
-| :---: | :---: |
-| ![Altman Z-Score](screenshots/04_altman_z_score_analysis.png) | ![Dashboard Plotly](screenshots/05_financial_benchmark_dashboard.png) |
+| Altman Z-Score Analysis |
+| :---: |
+| ![Altman Z-Score](screenshots/04_altman_z_score_analysis.png) |
+
+#### 📊 Plotly Interactive Benchmark Dashboard
+
+<p align="center">
+  <img src="screenshots/05_financial_benchmark_dashboard.png" width="100%" alt="Plotly Financial Benchmark Dashboard">
+</p>
 
 ---
 
-💻 Quickstart & Run Locally
+## 💻 Quickstart & Run Locally
+
 ```bash
-git clone https://github.com/tuo-username/corporate-financial-health-leonardo-analysis.git
+git clone [https://github.com/tuo-username/corporate-financial-health-leonardo-analysis.git](https://github.com/tuo-username/corporate-financial-health-leonardo-analysis.git)
 cd corporate-financial-health-leonardo-analysis
 python -m venv venv
 source venv/bin/activate
