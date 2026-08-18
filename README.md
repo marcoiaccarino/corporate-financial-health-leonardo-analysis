@@ -1,6 +1,6 @@
 # Corporate Financial Health & Credit Benchmark Analysis: Leonardo S.p.A. vs Airbus SE (2021–2024)
 
-> Quick Links: 📄 [Executive Financial Report (PDF)](#) | 🐍 [Python Analysis Notebook](notebooks/financial_analysis.ipynb)
+> Quick Links: 🐍 [Python Analysis Notebook](notebooks/financial_analysis.ipynb)
 
 ---
 
