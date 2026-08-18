@@ -8,7 +8,7 @@
 
 Valutare la solidità economico-patrimoniale, la sostenibilità della struttura finanziaria e la vulnerabilità al rischio di default nel settore Aerospazio & Difesa (A&D) è un imperativo strategico per la corporate governance e la valutazione del merito creditizio. Attraverso una pipeline integrata in Python, questo studio conduce un'analisi comparativa tra **Leonardo S.p.A.** e **Airbus SE** lungo l'arco temporale 2021–2024 (4 esercizi), applicando i principi contabili IFRS, la riclassificazione accademica di bilancio, un set completo di 12 indici finanziari e la modellazione predittiva dell'**Altman Z-Score**.
 
-**Key Finding:** Il confronto evidenzia una netta asimmetria strutturale. **Airbus SE** mantiene una posizione di liquidità netta strutturalmente negativa (PNF pari a -3.197 M€ nel 2024, indicativa di cassa eccedente i debiti) e un'incidenza limitata della leva finanziaria (DF/MP a 0,70). Al contrario, **Leonardo S.p.A.**, pur registrando un costante deleveraging (DF/MP sceso da 0,76 a 0,43 e PNF ridotta a 860 M€) e una marginalità operativa superiore (EBITDA Margin all'11,6% vs 10,3% nel 2024), rimane penalizzata sul fronte della solvibilità globale: l'**Altman Z-Score** sale a 1,58 nel 2024 (vs 1,70 di Airbus), mantenendo entrambi i player nella fascia di *Distress Zone* ($Z < 1,81$) a causa dell'elevata intensità di capitale circolante e della leva operativa tipica del settore.
+**Key Finding:** Il confronto evidenzia una netta asimmetria strutturale. **Airbus SE** mantiene una posizione di liquidità netta strutturalmente negativa (PFN pari a -3.197 M€ nel 2024, indicativa di cassa eccedente i debiti) e un'incidenza limitata della leva finanziaria (DF/MP a 0,70). Al contrario, **Leonardo S.p.A.**, pur registrando un costante deleveraging (DF/MP sceso da 0,76 a 0,43 e PNF ridotta a 860 M€) e una marginalità operativa superiore (EBITDA Margin all'11,6% vs 10,3% nel 2024), rimane penalizzata sul fronte della solvibilità globale: l'**Altman Z-Score** sale a 1,58 nel 2024 (vs 1,70 di Airbus), mantenendo entrambi i player nella fascia di *Distress Zone* ($Z < 1,81$) a causa dell'elevata intensità di capitale circolante e della leva operativa tipica del settore.
 
 ---
 
@@ -106,7 +106,7 @@ Framework di valutazione integrato articolato su 12 indicatori economico-patrimo
   * $X_1 = \text{CCN} / \text{Totale Attivo}$ *(Liquidità netta operativa)*
   * $X_2 = \text{Utili Non Distribuiti (Retained Earnings)} / \text{Totale Attivo}$ *(Capacità di autofinanziamento)*
   * $X_3 = \text{EBIT} / \text{Totale Attivo}$ *(Produttività del capitale investito)*
-  * $X_4 = \text{Capitalizzazione di Mercato} / \text{Totale Passività}$ *(Leva di mercato)*
+  * $X_4 = \text{Patrimonio Netto Contabile (Mezzi Propri)} / \text{Totale Passività (Autonomia finanziaria e leva di bilancio)}$ *(Leva di mercato)*
   * $X_5 = \text{Ricavi} / \text{Totale Attivo}$ *(Rotazione degli attivi)*
 * **Soglie di Solvibilità:** $Z > 2.99$ (Safe Zone 🟢), $1.81 \le Z \le 2.99$ (Grey Zone 🟡), $Z < 1.81$ (Distress Zone 🔴).
 
@@ -139,11 +139,11 @@ Framework di valutazione integrato articolato su 12 indicatori economico-patrimo
 * **Politica di Deleveraging e Gestione Cassa:** Leonardo ha mostrato una disciplina finanziaria impeccabile, riducendo l'indice di indebitamento finanziario ($\text{DF}/\text{MP}$) dal 0,76 (2021) allo 0,43 (2024) e abbattendo la PFN da oltre 2,1 Mld€ a 860 M€. Airbus opera su un paradigma opposto: una PFN stabilmente negativa (-3,19 Mld€ nel 2024) che garantisce una cassa netta massiccia a protezione da shock esogeni.
 
 ### 2. Matrice dei Rischi Strategici:
-* **Vulnerabilità Altman Z-Score (Distress Zone):** Entrambi i gruppi restano confinati sotto la soglia di sicurezza di 1,81 (Leonardo a 1,58, Airbus a 1,70 nel 2024). Per Leonardo il freno principale è rappresentato dall'alto assorbimento di CCN ($X_1$) su commesse pluriennali di difesa; per Airbus pesa la leva operativa e l'elevata quota di passività correnti operative ($X_4$).
+* **Vulnerabilità Altman Z-Score (Distress Zone):** Entrambi i gruppi restano confinati sotto la soglia di sicurezza di 1,81 (Leonardo a 1,58, Airbus a 1,70 nel 2024). Per Leonardo il punteggio sconta la moderata rotazione dell'attivo (X5) e il rendimento complessivo del capitale investito (X3), tipici delle commesse pluriennali di difesa; per Airbus pesa l'elevata quota di passività totali rispetto al patrimonio netto contabile (X4).
 * **Rischio di Tasso e Costo del Debito:** Nonostante la riduzione del debito, Leonardo sostiene un costo del servizio del debito più oneroso rispetto ad Airbus, la quale sfrutta la propria cassa netta per generare proventi finanziari attivi mitigando gli incrementi dei tassi BCE.
 
 ### 3. Raccomandazioni Operative per il C-Level:
-* **Ottimizzazione del Working Capital (Leonardo):** Accelerare le milestone di fatturazione e incasso sui contratti governativi per ridurre l'incidenza del CCN sul Totale Attivo ($X_1$), fattore primario per proiettare lo Z-Score oltre 1,81 nella *Grey Zone*.
+* **Ottimizzazione del Ciclo di Cassa (Leonardo):** Accelerare le milestone di fatturazione e incasso sui contratti governativi per massimizzare la generazione di cassa operativa (Free Cash Flow), abbattere ulteriormente gli oneri finanziari e accelerare il miglioramento della redditività (X3) e della solidità patrimoniale (X4) verso la *Grey Zone*.
 * **Stabilizzazione Supply Chain & Delivery (Airbus):** Standardizzare i cicli produttivi per minimizzare i ritardi di consegna degli aeromobili civili, evitando la volatilità della marginalità operativa registrata tra il 2022 e il 2023.
 
 ---
@@ -160,7 +160,7 @@ Framework di valutazione integrato articolato su 12 indicatori economico-patrimo
 
 * **Programma di Riconciliazione e Anticipo CCN (Leonardo):**
   * *Azione:* Rinegoziazione delle milestone di pagamento sui contratti di fornitura per la difesa e cartolarizzazione pro-soluto dei crediti commerciali verso enti governativi.
-  * *Beneficio Economico:* Riduzione del capitale circolante netto investito (CCN), incremento della componente $X_1$ dell'Altman Z-Score e accelerazione dell'uscita definitiva dalla *Distress Zone* verso la *Grey Zone*.
+  * *Beneficio Economico:* Riduzione del capitale circolante investito (CCN), conversione rapida dei crediti in liquidità immediata, taglio degli oneri finanziari e rafforzamento complessivo del profilo Z-Score verso la Grey Zone.
 * **Capital Allocation e Ottimizzazione della Liquidità Netta (Airbus):**
   * *Azione:* Allocazione strategica della massiccia cassa netta (oltre 3,1 Mld€) su investimenti diretti in automazione industriale e programmi di riacquisto azioni proprie (share buyback).
   * *Beneficio Economico:* Incremento del ritorno sul capitale investito (ROI) e contestuale mitigazione del rischio di rendimenti reali negativi sulla liquidità inerte.
