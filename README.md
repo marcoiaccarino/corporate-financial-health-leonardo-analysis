@@ -60,10 +60,38 @@ Verifica dell'identità contabile: $\text{Totale Attivo} = \text{Totale Passivo}
 
 ### 3. Financial Ratios & Benchmark Computations
 
-Analisi integrata su 12 indicatori di redditività, efficienza, liquidità e solidità patrimoniale:
-* **Redditività:** $\text{ROE} = \frac{\text{Utile Netto}}{\text{PN}}$, $\text{ROI} = \frac{\text{EBIT}}{\text{CIN}}$, $\text{ROS} = \frac{\text{EBIT}}{\text{Ricavi}}$, $\text{EBITDA Margin} = \frac{\text{EBITDA}}{\text{Ricavi}}$.
-* **Struttura & Indebitamento:** $\text{Leva} = \frac{\text{Debiti Finanziari}}{\text{Patrimonio Netto}}$, $\text{Copertura Oneri} = \frac{\text{EBITDA}}{\text{Oneri Finanziari}}$, $\text{PFN} = \text{Debiti Finanziari} - \text{Liquidità}$.
-* **Turnover & Working Capital:** $\text{Asset Turnover} = \frac{\text{Ricavi}}{\text{Totale Attivo}}$, $\text{Current Ratio} = \frac{\text{Attivo Circolante}}{\text{Passivo Corrente}}$.
+Framework di valutazione integrato articolato su 12 indicatori economico-patrimoniali:
+
+* **Redditività & Margini:**
+  
+  * $\text{ROE} = \frac{\text{Utile Netto}}{\text{Patrimonio Netto}}$ &nbsp;    |    &nbsp; $\text{ROI} = \frac{\text{EBIT}}{\text{Capitale Investito Netto}}$
+    
+    
+  * $\text{ROS} = \frac{\text{EBIT}}{\text{Ricavi}}$ &nbsp;    |    &nbsp; $\text{EBITDA Margin} = \frac{\text{EBITDA}}{\text{Ricavi}}$
+
+
+    
+    
+* **Struttura Finanziaria & Solvibilità:**
+  
+  * $\text{Leva Finanziaria} = \frac{\text{Debiti Finanziari}}{\text{Patrimonio Netto}}$ &nbsp;    |    &nbsp; $\text{PFN} = \text{Debiti Finanziari} - \text{Liquidità}$
+    
+    
+  * $\text{Copertura Oneri} = \frac{\text{EBITDA}}{\text{Oneri Finanziari}}$ &nbsp;    |    &nbsp; $\text{Copertura Attivo Fisso} = \frac{\text{Patrimonio Netto} + \text{Passivo M/L}}{\text{Attivo Fisso Netto}}$
+
+
+    
+    
+* **Efficienza & Liquidità Operativa:**
+  
+  * $\text{Asset Turnover} = \frac{\text{Ricavi}}{\text{Totale Attivo}}$ &nbsp;    |    &nbsp; $\text{Current Ratio} = \frac{\text{Attivo Circolante}}{\text{Passivo Corrente}}$
+    
+    
+  * $\text{Quick Ratio} = \frac{\text{Liquidità + Crediti}}{\text{Passivo Corrente}}$ &nbsp;    |    &nbsp; $\text{Cash Ratio} = \frac{\text{Liquidità Immediate}}{\text{Passivo Corrente}}$
+
+
+    
+    
 
 | Leonardo S.p.A. (Set Ratios) | Airbus SE (Set Ratios) |
 | :---: | :---: |
