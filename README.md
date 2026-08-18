@@ -106,7 +106,7 @@ Framework di valutazione integrato articolato su 12 indicatori economico-patrimo
   * $X_1 = \text{CCN} / \text{Totale Attivo}$ *(Liquidità netta operativa)*
   * $X_2 = \text{Utili Non Distribuiti (Retained Earnings)} / \text{Totale Attivo}$ *(Capacità di autofinanziamento)*
   * $X_3 = \text{EBIT} / \text{Totale Attivo}$ *(Produttività del capitale investito)*
-  * $X_4 = \text{Patrimonio Netto Contabile (Mezzi Propri)} / \text{Totale Passività (Autonomia finanziaria e leva di bilancio)}$ *(Leva di mercato)*
+  * $X_4 = \text{Patrimonio Netto Contabile (Mezzi Propri)} / \text{Totale Passività (Autonomia finanziaria e leva di bilancio)}$ 
   * $X_5 = \text{Ricavi} / \text{Totale Attivo}$ *(Rotazione degli attivi)*
 * **Soglie di Solvibilità:** $Z > 2.99$ (Safe Zone 🟢), $1.81 \le Z \le 2.99$ (Grey Zone 🟡), $Z < 1.81$ (Distress Zone 🔴).
 
