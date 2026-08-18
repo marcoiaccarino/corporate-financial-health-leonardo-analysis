@@ -1,83 +1,140 @@
-# 📊 Corporate Financial Health & Bankruptcy Risk Analysis
-### Case Study: Leonardo S.p.A. (LDO.MI) vs Airbus SE (AIR.PA)
+# 📊 Corporate Financial Benchmark & Solvency Analysis: Leonardo S.p.A. vs Airbus SE (2021–2024)
+
 **Author:** Marco Iaccarino  
-**Domain:** Corporate Finance, Financial Accounting & Credit Risk  
-**Time Horizon:** Fiscal Years 2021–2024 (4-Year Annual Data)  
-**Tech Stack:** Python (`pandas`, `numpy`, `plotly`, `yfinance`)
+**Domain:** Corporate Finance, Financial Statement Analysis & Credit Risk  
+**Time Horizon:** Fiscal Years 2021–2024 (4-Year Consolidated Data)  
+**Tech Stack:** Python (pandas, numpy, plotly, yfinance)  
+**Methodology:** Standard Italian Economia Aziendale 2 Academic Accounting Framework  
 
 ---
 
-## 📌 Executive Summary
-Valutare lo stato di salute economico-finanziario e la solvibilità di un'impresa manifatturiera ad alta complessità è fondamentale per monitorare la gestione operativa, l'autonomia patrimoniale e la solidità del capitale. 
-Questo progetto rappresenta un **Case Study didattico e analitico** che esamina l'andamento storico quadriennale (**2021–2024**) di **Leonardo S.p.A.** a confronto con il benchmark europeo **Airbus SE**, integrando:
-1. **Riclassificazione di Bilancio** (Conto Economico a Valore Aggiunto e Stato Patrimoniale Finanziario).
-2. **Sistema di Indici di Bilancio** (Redditività, Liquidità, Solidità Patrimoniale e Copertura).
-3. **Credit Risk Scoring** (Modello Altman Z-Score per imprese manifatturiere).
-4. **Metriche ESG di Base** (Intensità emissiva Scope 1-2 e impatto sui costi di finanziamento).
+## 📌 Executive Summary & Business Problem
 
-* **Key Finding:** L'analisi evidenzia una progressiva ripresa della redditività operativa (ROS ed EBITDA margin in crescita costante) e un graduale rafforzamento della solidità patrimoniale, con il rapporto di indebitamento e la PFN/EBITDA che migliorano verso livelli di equilibrio. L'Altman Z-Score mostra la tenuta della solvibilità a fronte di un ciclo produttivo capital-intensive caratterizzato da commesse pluriennali.
+Questo progetto analizza l'andamento economico-finanziario e la solvibilità quadriennale (FY 2021–2024) di **Leonardo S.p.A.** a confronto con il benchmark europeo **Airbus SE**, applicando il modello formale di **Economia Aziendale 2**:
+* **Conto Economico a Valore Aggiunto** (con scomposizione in aree di gestione: VP, VA, MOL, ROGC, ROA, RC, RAI, RN).
+* **Stato Patrimoniale Finanziario a 5 Aree** (criterio di liquidità ed esigibilità decrescente).
+* **Set Essenziale di 12 Indici di Bilancio** (Redditività con DuPont Analysis, Solidità e Copertura, Liquidità e CCN).
+* **Modello Altman Z-Score (Manufacturing)** per la stima del rischio di insolvenza e default.
 
----
-
-## 🎯 Business Problem
-Un neolaureato o junior financial analyst deve supportare il management o un istituto di credito nella valutazione di un'azienda industriale. Le domande pratiche a cui il progetto risponde sono:
-* **Marginalità:** Come sono evoluti i margini aziendali (Valore Aggiunto, EBITDA, EBIT) lungo il quadriennio 2021–2024 attraverso la riclassificazione del Conto Economico?
-* **Solidità e Liquidità:** La struttura patrimoniale è equilibrata? Gli indici di liquidità (Current/Quick Ratio) e gli indici di solidità (Autonomia Finanziaria, Leverage) garantiscono sostenibilità nel medio-lungo termine?
-* **Rischio di Default:** Qual è il posizionamento di solvibilità secondo l'Altman Z-Score (*Safe*, *Grey*, *Distress*)?
-* **Sostenibilità:** Come si posiziona l'azienda rispetto ai target di riduzione delle emissioni (Carbon Intensity)?
+### 🔍 Key Findings
+* **Redditività Operativa:** Leonardo mostra un recupero costante: il ROS sale dal 6,44% (2021) al 7,47% (2024) e il ROE raggiunge il 10,59% nel 2024, agganciando la marginalità operativa di Airbus (ROS 7,44%).
+* **Solidità e Deleveraging:** Leonardo dimezza il debito finanziario su mezzi propri (DF/MP da 0,76 a 0,43) e riduce l'incidenza PFN/EBITDA da 1,39 a 0,48 anni (debito netto a 900 M€). Airbus conferma una cassa netta positiva (PFN -3.200 M€).
+* **Copertura degli Investimenti:** Entrambi i player mantengono la Copertura dell'Attivo Fisso di 2° Livello ampiamente > 1,0 (1,33 per Leonardo e 1,20 per Airbus nel 2024), garantendo equilibrio tra immobilizzazioni e fonti a M/L termine.
+* **Altman Z-Score:** Leonardo compie una transizione virtuosa passando dalla Distress Zone iniziale (1,51) alla Grey Zone superiore (2,76 nel 2024), trainata dalla crescita dei margini e dalla rivalutazione della capitalizzazione di mercato.
 
 ---
 
 ## 📁 Repository Structure
 
-    corporate-financial-health-leonardo-analysis/
-    │
-    ├── data/
-    │   ├── raw/                 # Raw financial statements from yfinance (FY 2021-2024)
-    │   └── processed/           # Reclassified balance sheets, income statements and KPIs
-    │
-    ├── notebooks/
-    │   └── financial_analysis.ipynb   # Main end-to-end Python notebook
-    │
-    ├── README.md                # Project documentation and executive summary
-    └── requirements.txt         # Python dependencies
+corporate-financial-health-leonardo-analysis/
+│
+├── data/
+│   ├── raw/                 # Dati IFRS grezzi di bilancio (2021-2024)
+│   └── processed/           # Matrici riclassificate e tabelle indici
+│
+├── notebooks/
+│   └── financial_analysis.ipynb   # Pipeline completa in Python (dati, calcoli e grafici)
+│
+├── screenshots/             # Output documentati del progetto
+│   ├── 01_leonardo_ifrs_statements.png
+│   ├── 01_bis_airbus_ifrs_statements.png
+│   ├── 02_leonardo_reclassified_statements.png
+│   ├── 02_bis_airbus_reclassified_statements.png
+│   ├── 03_leonardo_financial_ratios.png
+│   ├── 03_bis_airbus_financial_ratios.png
+│   ├── 04_altman_z_score_analysis.png
+│   └── 05_financial_benchmark_dashboard.png
+│
+├── README.md                # Reportistica del progetto
+└── requirements.txt         # Dipendenze Python
 
 ---
 
-## 🛠️ Methodology & Accounting Framework
+## 🛠️ Accounting Framework, Formulas & Project Deliverables
 
-### 1. Financial Statement Reclassification (FY 2021–2024)
+### 1. Bilanci Consolidati Ufficiali IFRS (FY 2021–2024)
+Verifica dell'identità contabile: Totale Attivo = Totale Passivo + Patrimonio Netto.
+
+| Leonardo S.p.A. (IFRS Grezzo) | Airbus SE (IFRS Grezzo) |
+| :---: | :---: |
+| ![Leonardo IFRS](screenshots/01_leonardo_ifrs_statements.png) | ![Airbus IFRS](screenshots/01_bis_airbus_ifrs_statements.png) |
+
+---
+
+### 2. Riclassificazioni Accademiche (Economia Aziendale 2)
+
 * **Conto Economico a Valore Aggiunto:**
-  $$\text{Ricavi delle Vendite} - \text{Costi Operativi Esterni} = \text{Valore Aggiunto}$$
-  $$\text{Valore Aggiunto} - \text{Costo del Personale} = \text{EBITDA (MOL)}$$
-  $$\text{EBITDA} - \text{Ammortamenti e Svalutazioni} = \text{EBIT (Reddito Operativo)}$$
-  $$\text{EBIT} \pm \text{Proventi/Oneri Finanziari} = \text{EBT (Risultato Ante Imposte)}$$
-  $$\text{EBT} - \text{Imposte} = \text{Utile Netto}$$
+  * VP (Valore Produzione) - CE (Costi Esterni) = VA (Valore Aggiunto)
+  * VA - L (Costo Lavoro) = MOL (EBITDA)
+  * MOL - AA (Ammortamenti/Accantonamenti) = ROGC (Redd. Op. Caratteristico)
+  * ROGC + RGCA (Gestione Accessoria) = ROA (Redd. Op. Aziendale / EBIT)
+  * ROA - OF (Oneri Finanziari) = RC (Reddito di Competenza)
+  * RC +/- CS (Componenti Straordinari) = RAI (Reddito Ante Imposte)
+  * RAI - I (Imposte) = RN (Reddito Netto)
+* **Stato Patrimoniale Finanziario (5 Aree):**
+  * Impieghi: Capitale Investito (CI) = Attivo a Breve (AB) + Attivo Fisso Netto (AFN)
+  * Fonti: Fonti Finanziamento (FF) = Passivo Breve (PB) + Passivo M/L (PML) + Mezzi Propri (MP)
+  * Mezzi di Terzi: MT = PB + PML
 
-* **Stato Patrimoniale Finanziario (Criterio di Liquidità ed Esigibilità):**
-  * **Attivo:** Attivo Circolante (Liquidità Immediate, Differite, Rimanenze) vs Attivo Fisso Netto (Immobilizzazioni).
-  * **Passivo:** Passivo Corrente (a breve termine), Passivo Consolidato (a medio-lungo termine) e Patrimonio Netto.
-
-### 2. Comprehensive Ratio Analysis & Risk Scoring
-* **Redditività:**
-  $$\text{ROE} = \frac{\text{Utile Netto}}{\text{Patrimonio Netto}}, \quad \text{ROI} = \frac{\text{EBIT}}{\text{Totale Attivo}}, \quad \text{ROS} = \frac{\text{EBIT}}{\text{Ricavi}}$$
-  
-* **Liquidità:**
-  $$\text{Current Ratio} = \frac{\text{Attivo Circolante}}{\text{Passivo Corrente}}, \quad \text{Quick Ratio} = \frac{\text{Attivo Circolante} - \text{Rimanenze}}{\text{Passivo Corrente}}$$
-  
-* **Solidità Patrimoniale e Struttura:**
-  $$\text{Rapporto di Indebitamento (Leverage)} = \frac{\text{Totale Debiti}}{\text{Patrimonio Netto}}$$
-  $$\text{Grado di Autonomia Finanziaria} = \frac{\text{Patrimonio Netto}}{\text{Totale Attivo}}$$
-  $$\text{Copertura delle Immobilizzazioni} = \frac{\text{Patrimonio Netto} + \text{Passività Consolidate}}{\text{Attivo Fisso Netto}}$$
-  
-* **Altman Z-Score (Manufacturing Model):**
-  $$Z = 1.2 X_1 + 1.4 X_2 + 3.3 X_3 + 0.6 X_4 + 0.999 X_5$$
-  * *Dove:* $X_1 = \frac{\text{CCN}}{\text{Totale Attivo}}$, $X_2 = \frac{\text{Utili Reinvestiti}}{\text{Totale Attivo}}$, $X_3 = \frac{\text{EBIT}}{\text{Totale Attivo}}$, $X_4 = \frac{\text{Valore di Mercato PN}}{\text{Totale Passivo}}$, $X_5 = \frac{\text{Ricavi}}{\text{Totale Attivo}}$.
-  * *Soglie di Rischio:* $Z > 2.99$ (Safe Zone), $1.81 \le Z \le 2.99$ (Grey Zone), $Z < 1.81$ (Distress Zone).
+| Leonardo S.p.A. (CE & SP Riclassificati) | Airbus SE (CE & SP Riclassificati) |
+| :---: | :---: |
+| ![Leonardo Riclassificato](screenshots/02_leonardo_reclassified_statements.png) | ![Airbus Riclassificato](screenshots/02_bis_airbus_reclassified_statements.png) |
 
 ---
 
-## ⚖️ Academic Case Study & Data Integrity Disclaimer
-* **Didactic Purpose:** This repository is an independent academic case study developed solely for educational, portfolio demonstration, and research purposes. It does not constitute financial advice, investment recommendation, or an official credit rating.
-* **Data Sourcing & Limitations:** Financial data and historical records (FY 2021–2024) are retrieved via public APIs (`yfinance`). While data integrity checks and accounting reconciliations ($\text{Total Assets} = \text{Total Liabilities} + \text{Equity}$) have been implemented in the pipeline, users and reviewers must refer exclusively to the official audited Annual Reports (Relazioni Finanziarie di Bilancio) published by Leonardo S.p.A. and Airbus SE for official figures.
-* **Intellectual Property:** All corporate names, trademarks, and financial disclosures remain the intellectual property of their respective owners.
+### 3. Sistema Essenziale di Indici di Bilancio
+
+* **1. REDDITIVITÀ (PROFITABILITY)**
+  * ROE (%) = (RN / MP) * 100
+  * ROI (%) = (ROGC / CI) * 100
+  * ROA (%) = (EBIT / CI) * 100
+  * ROS (%) = (EBIT / Ricavi) * 100
+  * Rotazione CI (Turnover) = Ricavi / CI
+* **2. SOLIDITÀ PATRIMONIALE (SOLVENCY)**
+  * Rapp. Indebitamento Complessivo = MT / MP
+  * Rapp. Indebitamento Finanziario = Debiti Finanziari Totali / MP
+  * Copertura Attivo Fisso 2° Livello = (MP + PML) / AFN  [Target > 1.0]
+  * Incidenza PFN / EBITDA = Posizione Finanziaria Netta / EBITDA [Anni]
+* **3. LIQUIDITÀ & CIRCOLANTE (LIQUIDITY)**
+  * Indice Liquidità Primaria (Cash Ratio) = Cassa / PB
+  * Indice di Tesoreria (Quick Ratio) = (Cassa + Crediti) / PB
+  * Indice Liquidità Secondaria (Current Ratio) = AB / PB  [Target >= 1.0]
+  * Capitale Circolante Netto (CCN) = AB - PB [€M]
+
+| Leonardo S.p.A. (Indici) | Airbus SE (Indici) |
+| :---: | :---: |
+| ![Leonardo Indici](screenshots/03_leonardo_financial_ratios.png) | ![Airbus Indici](screenshots/03_bis_airbus_financial_ratios.png) |
+
+---
+
+### 4. Altman Z-Score Model & Dashboard Plotly
+
+* **Formula Z-Score (Manufacturing):**  
+  Z = 1.2*X1 + 1.4*X2 + 3.3*X3 + 0.6*X4 + 0.999*X5  
+  * X1 = CCN / Totale Attivo
+  * X2 = Retained Earnings / Totale Attivo
+  * X3 = EBIT / Totale Attivo
+  * X4 = Market Cap / MT
+  * X5 = Ricavi / Totale Attivo
+* **Soglie:** Z > 2.99 (Safe Zone 🟢), 1.81 <= Z <= 2.99 (Grey Zone 🟡), Z < 1.81 (Distress Zone 🔴).
+
+| Altman Z-Score Analysis | Corporate Benchmark Dashboard (Plotly) |
+| :---: | :---: |
+| ![Altman Z-Score](screenshots/04_altman_z_score_analysis.png) | ![Dashboard Plotly](screenshots/05_financial_benchmark_dashboard.png) |
+
+---
+
+💻 Quickstart & Run Locally
+```bash
+git clone https://github.com/tuo-username/corporate-financial-health-leonardo-analysis.git
+cd corporate-financial-health-leonardo-analysis
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+jupyter notebook notebooks/financial_analysis.ipynb
+```
+
+⚖️ Academic Case Study & Data Integrity Disclaimer
+Finalità Didattica: Case study accademico indipendente sviluppato a scopi di portfolio e ricerca. Non costituisce consulenza finanziaria né credit rating formale.
+
+Fonti: Dati ricavati da bilanci consolidati pubblici (IFRS). Per cifre certificate fare riferimento esclusivo alle Relazioni Finanziarie annuali ufficiali di Leonardo S.p.A. e Airbus SE.
